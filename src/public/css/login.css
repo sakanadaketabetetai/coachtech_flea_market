@@ -1,0 +1,91 @@
+/* ログインフォーム全体のスタイル */
+.login {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトル部分 */
+.login_title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login_title-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 入力フィールド全体のスタイル */
+.login_content {
+    margin-bottom: 20px;
+}
+
+.login_input-group {
+    margin-bottom: 15px;
+}
+
+.login_input-title {
+    margin-bottom: 5px;
+}
+
+.login_input-title--text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* 入力フィールド */
+.login_input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login_input input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* ログインボタン */
+.login_button {
+    text-align: center;
+}
+
+.login_button-submit {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login_button-submit:hover {
+    background-color: #0056b3;
+}
+
+/* 登録リンク */
+.login_link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login_link-text {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login_link-text:hover {
+    text-decoration: underline;
+}

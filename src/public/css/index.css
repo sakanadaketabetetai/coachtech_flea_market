@@ -1,0 +1,82 @@
+/* 親コンテナ */
+.item-list {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.item-list__filters {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: left;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.item-list__filters-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* ボタンスタイル */
+.item-list__button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #3d3d3d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s;
+}
+
+.item-list__button-select {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s;
+}
+
+.item-list__button:hover {
+    background-color: #b2b3b7;
+}
+
+/* アイテムカードのスタイル */
+.item-list__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.item-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+}
+
+/* アイテム画像 */
+.item-card__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-card__image-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.item-card__image-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

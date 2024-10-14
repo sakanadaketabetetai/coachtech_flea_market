@@ -1,0 +1,128 @@
+/* comment-page */
+.comment-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.comment-page__item {
+    width: 40%;
+}
+
+.comment-page__item-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.comment-page__item-details {
+    width: 55%;
+}
+
+/* item-details */
+.item-details {
+    margin-bottom: 20px;
+}
+
+.item-details__name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.item-details__price {
+    font-size: 20px;
+    color: #ff5f5f;
+}
+
+/* item-actions */
+.item-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.item-actions__favorite, .item-actions__comment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.favorite-button, .comment-button {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.favorite-count, .comment-count {
+    font-size: 16px;
+}
+
+/* comment-list */
+.comment-list {
+    margin-bottom: 20px;
+}
+
+.comment {
+    width:100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+.comment__user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.comment__user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comment__user-name {
+    font-weight: bold;
+}
+
+/* comment-form */
+.comment-form {
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+.comment-form__label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment-form__textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+.comment-form__submit {
+    background-color: #ff5f5f;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-form__submit:hover{
+    background-color: #a91609;
+}
+

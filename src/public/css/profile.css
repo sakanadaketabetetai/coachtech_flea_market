@@ -1,0 +1,101 @@
+/* 全体のレイアウト */
+.profile {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ヘッダー */
+.profile__header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile__header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 画像アップロード部分 */
+.profile__image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.profile__image-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile__image-upload {
+    display: flex;
+    justify-content: center;
+}
+
+.profile__image-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile__image-label:hover {
+    background-color: #45a049;
+}
+
+.profile__image-input {
+    display: none;
+}
+
+/* プロフィール情報部分 */
+.profile__details {
+    margin-bottom: 20px;
+}
+
+.profile__field {
+    margin-bottom: 15px;
+}
+
+.profile__label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.profile__input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* 更新ボタン */
+.profile__submit {
+    text-align: center;
+}
+
+.profile__submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.profile__submit-button:hover {
+    background-color: #0056b3;
+}

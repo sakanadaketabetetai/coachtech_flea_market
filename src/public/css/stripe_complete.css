@@ -1,0 +1,79 @@
+/* 全体のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* 支払い画面のメインコンテナ */
+.payment {
+    max-width: 600px; /* 最大幅を600pxに制限 */
+    margin: 50px auto; /* 上下のマージンを50px、左右中央寄せ */
+    padding: 20px;
+    background-color: #fff; /* 白背景 */
+    border-radius: 8px; /* 角を丸める */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+/* ヘッダー */
+.payment__header {
+    display: flex; /* フレックスボックスで配置 */
+    align-items: center; /* 中央に揃える */
+    margin-bottom: 20px; /* 下にマージンを追加 */
+}
+
+.payment__header-back {
+    text-decoration: none; /* 下線を消す */
+    color: #007bff; /* ブルーの文字色 */
+    font-size: 16px; /* フォントサイズを16pxに */
+}
+
+.payment__back-icon {
+    margin-right: 5px; /* アイコンとテキストの間にマージンを追加 */
+}
+
+/* 支払い完了コンテンツ */
+.payment__container {
+    text-align: center; /* 中央揃え */
+}
+
+.payment__title {
+    font-size: 24px; /* タイトルのフォントサイズ */
+    margin-bottom: 10px; /* 下にマージンを追加 */
+    color: #333; /* ダークグレー */
+}
+
+.payment__message {
+    font-size: 18px; /* メッセージのフォントサイズ */
+    margin-bottom: 20px; /* 下にマージンを追加 */
+    color: #555; /* グレー */
+}
+
+/* アイコンコンテナ */
+.payment__icon-container {
+    font-size: 50px; /* アイコンのサイズ */
+    color: #28a745; /* 成功を示す緑色 */
+    margin-bottom: 20px; /* 下にマージンを追加 */
+}
+
+/* ホームリンク */
+.payment__home-link {
+    display: inline-block; /* インラインブロックにして、パディングを適用可能に */
+    margin-top: 20px; /* 上にマージンを追加 */
+    padding: 10px 20px; /* パディングを追加 */
+    background-color: #007bff; /* ボタンの背景色 */
+    color: #fff; /* ボタンの文字色 */
+    border-radius: 5px; /* 角を丸める */
+    text-decoration: none; /* 下線を消す */
+    transition: background-color 0.3s ease; /* 背景色の遷移をスムーズに */
+}
+
+.payment__home-link:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}

@@ -1,0 +1,98 @@
+/* マイページ全体のスタイル */
+.mypage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ユーザー情報のヘッダー部分 */
+.mypage__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.mypage__image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.mypage__name h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mypage__profile-edit {
+    margin-left: auto;
+}
+
+.mypage__edit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mypage__edit-button:hover {
+    background-color: #45a049;
+}
+
+/* 出品商品、購入商品のボタン部分 */
+.mypage__actions {
+    margin-bottom: 30px;
+}
+
+.mypage__action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mypage__button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+    font-size: 16px;
+}
+
+.mypage__button:hover {
+    background-color: #0056b3;
+}
+
+/* 商品リスト部分 */
+.mypage__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mypage__item {
+    width: 48%;
+}
+
+.mypage__item-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.mypage__item-button img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mypage__item-button:hover img {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
