@@ -4,8 +4,6 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ユーザー情報のヘッダー部分 */
@@ -51,33 +49,36 @@
 
 .mypage__action-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .mypage__button {
-    background-color: #007bff;
     color: white;
     padding: 10px 20px;
+    margin-right: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 48%;
     font-size: 16px;
+    transition: transform 0.2s;
 }
 
 .mypage__button:hover {
-    background-color: #0056b3;
+    background-color: #b2b3b7;
 }
 
 /* 商品リスト部分 */
 .mypage__items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
 .mypage__item {
-    width: 48%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
 .mypage__item-button {
@@ -89,10 +90,9 @@
 
 .mypage__item-button img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.mypage__item-button:hover img {
+.mypage__item:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
 }

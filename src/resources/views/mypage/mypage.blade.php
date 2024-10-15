@@ -20,7 +20,7 @@
                 <button class="mypage__edit-button">プロフィール編集</button>
             </form>
         </div>
-        @role('admin')
+        @role('admin') 
         <div>
             <a href="/admin">管理画面</a>
         </div>
@@ -49,7 +49,7 @@
     <div class="mypage__items">
         @foreach($items as $item)
         <div class="mypage__item">
-            <form action="">
+            <form action="/item/{{ $item->id }}" method="get">
                 @csrf
                 <div>
                     <button class="mypage__item-button">
