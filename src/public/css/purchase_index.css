@@ -58,17 +58,23 @@
 
 /* Overall page style */
 .purchase-index {
+    display:flex;
+    justify-content: space-between;
     padding: 20px;
+    gap:20px;
     background-color: #f7f7f7;
+}
+
+.purchase-index__left{
+    width:55%;
 }
 
 .purchase-index__item-details {
     display: flex;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: #f7f7f7;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .purchase-index__item-image img {
@@ -81,6 +87,7 @@
 
 .purchase-index__item-info {
     flex-grow: 1;
+    margin-left: 20px;
 }
 
 .purchase-index__item-name {
@@ -93,12 +100,19 @@
     font-size: 1.2em;
 }
 
-.purchase-index__payment, .purchase-index__delivery, .purchase-index__summary {
-    background-color: white;
+.purchase-index__summary {
+    background-color: #f7f7f7;
+    width: 35%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #000 ;
+}
+
+.purchase-index__payment, .purchase-index__delivery {
+    background-color: #f7f7f7;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .purchase-index__change-button {
@@ -125,6 +139,10 @@
 .purchase-index__summary-table th, .purchase-index__summary-table td {
     padding: 10px;
     text-align: left;
+}
+
+.purchase-index__summary-table{
+
 }
 
 @keyframes fadeIn {

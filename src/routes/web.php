@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\StripePaymentsController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,7 +67,7 @@ Route::get('/email/verify', function(){
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
 
-    return redirect('/thanks'); // 認証後のリダイレクト先を指定
+    return redirect('/'); // 認証後のリダイレクト先を指定
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 // メール認証通知の再送信

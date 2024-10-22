@@ -50,7 +50,10 @@ class SellController extends Controller
 
         $items = Item::all();
 
-        return view('index', compact('items'));
+        //検索結果のデフォルトをおすすめ(all_items)に設定
+        $search = "all_items";
+
+        return view('index', compact(['items', 'search'])); 
     }
 
     public function sell_items(Request $request){

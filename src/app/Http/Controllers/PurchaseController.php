@@ -8,6 +8,8 @@ use App\Models\Profile;
 use App\Models\SoldItem;
 use App\Models\User;
 use App\Models\Order;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\PurchaseCompleteMail;
 use Illuminate\Support\Facades\Auth;
 
 class PurchaseController extends Controller
@@ -30,18 +32,20 @@ class PurchaseController extends Controller
 
     public function purchase_address_update(Request $request){
         $user_id = Auth::id();
+        $user = User::find($user_id);
         $item = Item::find($request->item_id);
-        $user_profile = Profile::where('user_id', $user_id)->first();
+        $profile = Profile::where('user_id', $user_id)->first();
+        $purchase_method = session('payment_method', '未選択');
 
         //発送先を変更(profileのaddress,building,post_codeを編集)
-        if($user_profile){
-            $user_profile->post_code = $request->post_code;
-            $user_profile->address = $request->address;
-            $user_profile->building = $request->building;
-            $user_profile->save();
+        if($profile){
+            $profile->post_code = $request->post_code;
+            $profile->address = $request->address;
+            $profile->building = $request->building;
+            $profile->save();
         }
 
-        return view('purchase.purchase_index', compact(['user_profile','item']));
+        return view('purchase.purchase_index', compact(['user', 'profile','item', 'purchase_method']));
     }
 
     public function purchase_items(Request $request){
@@ -62,6 +66,7 @@ class PurchaseController extends Controller
 
     public function purchase_create(Request $request){
         $user_id = Auth::id();
+        $user = User::find($user_id);
         $item = Item::find($request->item_id);
 
         //Orderテーブルに注文内容を保存
@@ -72,6 +77,12 @@ class PurchaseController extends Controller
             'order_status' => 'pending',
             'amount' => $request->amount,
         ]);
+
+        $order = Order::where('user_id', $user_id)
+                        ->where('item_id', $item->id)
+                        ->first();
+
+        Mail::to($user->email)->send(new PurchaseCompleteMail($order, $user, $item));
 
         if( $request->payment_method == 'bank_transfer' ){
             return view('purchase.purchase_bank_complete');

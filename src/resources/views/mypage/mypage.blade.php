@@ -28,7 +28,7 @@
     </div>
 
     <div class="mypage__actions">
-        <div class="mypage__action-buttons">
+        <div class="mypage__action-buttons"> 
             <form action="/sell/items" method="get">
                 @csrf
                 <input type="hidden" name="user_id" value=" {{ $user->id }}">
