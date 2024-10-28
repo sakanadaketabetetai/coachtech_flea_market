@@ -56,7 +56,8 @@ class PurchaseController extends Controller
         }
         $user = User::find($user_id);
         $user_image = Profile::where('user_id', $user_id)->value('user_image');
-        return view('mypage.mypage', compact(['items','user','user_image']));
+        $search = $request->search;
+        return view('mypage.mypage', compact(['items','user','user_image','search']));
     }
 
     public function purchase_method_update(Request $request){

@@ -10,7 +10,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\StripePaymentsController;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Foundation\Auth\EmailVerificationRequest; 
 use Illuminate\Http\Request;
 
 /*
@@ -26,6 +26,7 @@ use Illuminate\Http\Request;
 
 Route::get('/', [ItemController::class, 'index']);
 Route::get('/item/{id}', [ItemController::class, 'detail']);
+Route::get('/search', [ItemController::class, 'item_search']);
 
 Route::middleware(['auth','verified'])->group(function(){
     Route::get('/sell', [SellController::class, 'sell_index']);
@@ -38,6 +39,7 @@ Route::middleware(['auth','verified'])->group(function(){
     Route::post('/purchase/create',[PurchaseController::class,'purchase_create']);
     Route::get('/mypage', [UserController::class,'mypage']);
     Route::post('/mypage/profile', [UserController::class,'mypage_profile']);
+    Route::post('/mypage/sell', [UserController::class,'mypage_sell']);
     Route::post('/mypage/profile/update', [UserController::class,'mypage_update']);
     Route::get('/item/favorite/search/mylist', [FavoriteItemController::class,'favorite_search']);
     Route::post('/item/favorite/update', [FavoriteItemController::class,'favorite']);

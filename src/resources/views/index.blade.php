@@ -7,7 +7,7 @@
 @section('content')
 <div class="item-list">
     <div class="item-list__filters">
-        <div class="item-list__filters-buttons">
+        <div class="item-list__filters-buttons"> 
             <form action="/item/favorite/search/mylist" method="get">
                 @csrf
                 <div>
@@ -36,16 +36,11 @@
     </div>
     <div class="item-list__items">
         @foreach( $items as $item )
-        <div class="item-card">
-            <form action="/item/{{ $item->id }}" method="get">
-                @csrf
-                <div class="item-card__image">
-                    <button type="submit" class="item-card__image-button">
-                        <img src="{{ $item->item_image }}" alt="item image" class="item-card__image-img">
-                    </button>
-                </div>
-            </form>
-        </div>
+        <a href="/item/{{ $item->id }}">         
+            <div class="item-card__image">
+                <img src="{{ $item->item_image }}" alt="item image" class="item-card__image-img">
+            </div>
+        </a>        
         @endforeach
     </div>
 </div>

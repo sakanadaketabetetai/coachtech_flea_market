@@ -28,4 +28,17 @@ class ItemController extends Controller
 
         return view('item_detail', compact(['item', 'favorite_items_count', 'comments_count','category','condition']));
     }
+
+    public function item_search(Request $request){
+        //クエリビルダを使って検索条件を設定します
+        $query = Item::query();
+        if ($request->filled('keyword')){
+            $keyword = $request->input('keyword');
+            $query->where('item_name', 'LIKE', "%{$keyword}%");
+        }
+        $items = $query->get();
+
+        $search = "all_items";
+        return view('index', compact(['items', 'search']));
+    }
 }

@@ -50,7 +50,16 @@
     gap: 15px;
 }
 
-.item-card {
+.item-card__image:hover {
+    transform: scale(1.05);
+}
+
+/* アイテム画像 */
+.item-card__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     background-color: white;
     padding: 15px;
     border-radius: 10px;
@@ -58,12 +67,7 @@
     transition: transform 0.2s;
 }
 
-.item-card:hover {
-    transform: scale(1.05);
-}
-
-/* アイテム画像 */
-.item-card__image {
+.item-card__image button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,4 +83,26 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .item-list__items {
+        grid-template-columns: repeat(2, 1fr); /* スマホでは2列 */
+    }
+
+    .form_search {
+        margin: 0 10px 20px 10px; /* 余白をさらに狭く */
+    }
+
+    .store_list-search, .store_keyword-input {
+        width: 100%; /* 検索ボックスの幅を100%にしてモバイルに最適化 */
+    }
+
+    .store_keyword-input input {
+        font-size: 14px; /* テキストサイズを小さく */
+        padding: 8px; /* パディングを少し減らす */
+    }
+    .form_search select{
+        width:100%;
+    }
 }

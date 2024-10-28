@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Profile;
 
@@ -24,7 +25,8 @@ class MasterDatabaseSeeder extends Seeder
         ]);
 
         Profile::create([
-            'user_id' => $president->id
+            'user_id' => $president->id,
+            'user_image' => Storage::url('images/人物の無料素材.svg')
         ]);
 
         
@@ -36,7 +38,8 @@ class MasterDatabaseSeeder extends Seeder
         ]);
 
         Profile::create([
-            'user_id' => $gest->id
+            'user_id' => $gest->id,
+            'user_image' => Storage::url('images/人物の無料素材.svg')
         ]);
 
         //admin Roleを作成

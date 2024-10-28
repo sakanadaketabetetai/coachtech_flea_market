@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Item extends Model
 {
@@ -12,6 +13,12 @@ class Item extends Model
         'item_name','price','description','item_image',
         'user_id','category_item_id','condition_id'
     ];
+
+    public function isFavorite(){
+        return FavoriteItem::where('user_id', Auth::id())
+                            ->where('item_id', $this->id)
+                            ->exists();
+    }
 
     public function users(){
         return $this->belongsTo(User::class);

@@ -22,9 +22,11 @@ class SellController extends Controller
 
     public function sell_create(Request $request){
         $user_id = Auth::id();
-        if($request->hasFile('image')){
+        if($request->hasFile('image')){  //hasFileで'image'ファイルの有無を判定
             $path = $request->file('image')->store('images', 'public'); //imagesフォルダに画像を
             $imagePath = Storage::url($path);
+        } else {
+            $imagePath = Storage::url('images/logo.svg');
         }
 
         // 商品情報を保存
@@ -63,6 +65,8 @@ class SellController extends Controller
         }
         $user = User::find($user_id);
         $user_image = Profile::where('user_id', $user_id)->value('user_image');
-        return view('mypage.mypage', compact(['items','user','user_image']));
+
+        $search = $request->search;
+        return view('mypage.mypage', compact(['items','user','user_image','search']));
     }
 }

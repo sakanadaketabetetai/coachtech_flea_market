@@ -1,13 +1,13 @@
 @extends('layouts.admin_layout')
 
 @section('css')
-
+    <link rel="stylesheet" href="{{ asset('css/admin_comment.css') }}">
 @endsection
 
 @section('content')
-<div>
-    <div>
-        <table>
+<div class="admin-comment">
+    <div class="admin-comment__container">
+        <table class="admin-comment__table">
             <tr>
                 <th>ユーザー名</th>
                 <th>商品名</th>
@@ -26,7 +26,7 @@
                     {{ $comment->comment }}
                 </td>
                 <td>
-                    <form action="/admin/comment/delete" method="post">
+                    <form action="/admin/comment/delete" method="post" class="admin-comment__form">
                         @csrf
                         <input type="hidden" name="comment_id" value="{{ $comment->id }}">
                         <div>
@@ -37,7 +37,7 @@
             </tr>
             @endforeach
         </table>
-        <div>
+        <div class="admin-comment__pagination">
             {{ $comments->links() }}
         </div>
     </div>

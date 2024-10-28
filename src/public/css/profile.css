@@ -11,7 +11,7 @@
 /* ヘッダー */
 .profile__header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .profile__header h2 {
@@ -23,14 +23,14 @@
 .profile__image-section {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: left;
     margin-bottom: 20px;
+    gap: 70px;
 }
 
 .profile__image-preview img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -42,16 +42,17 @@
 
 .profile__image-label {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    font-size: 14px;
+    color: #ff6f61;
+    padding: 10px 30px;
+    border: 1px solid #ff6f61;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    transition: background-color 0.3s
 }
 
 .profile__image-label:hover {
-    background-color: #45a049;
+    background-color: #b2b3b7;
 }
 
 .profile__image-input {
@@ -87,15 +88,17 @@
 }
 
 .profile__submit-button {
-    background-color: #007bff;
+    width: 100%;
+    background-color: #ff6f61;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .profile__submit-button:hover {
-    background-color: #0056b3;
+    background-color: #750f05;
 }

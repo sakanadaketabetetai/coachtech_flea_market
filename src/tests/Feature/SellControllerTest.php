@@ -33,7 +33,7 @@ class SellControllerTest extends TestCase
      * @group sell
      * 
      */
-    public function it_create_a_new_item()
+    public function test_it_create_a_new_item()
     {
         // 管理者権限を持つユーザーを作成する
         ///ユーザーを作成
@@ -105,6 +105,9 @@ class SellControllerTest extends TestCase
             'category_id' => 1,
             'image' => $uploadedFile // 既存の画像を使用
         ]);
+
+        // ステータスコード確認
+        $response->assertStatus(200);
 
         // データベース確認
         $this->assertDatabaseHas('items', ['item_name' => 'Test Item']);

@@ -73,10 +73,16 @@ body {
     cursor: pointer;
 }
 
+.item-detail__button-image{
+    width:20px;
+    margin: 5px ;
+}
+
 .item-detail__favorite-count,
 .item-detail__comment-count {
-    margin-left: 10px;
+    margin: auto 5px;
     font-size: 18px;
+    text-align: center;
 }
 
 .item-detail__purchase {

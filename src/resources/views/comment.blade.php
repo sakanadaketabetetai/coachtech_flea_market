@@ -25,11 +25,8 @@
                 </form>
             </div>
             <div class="item-actions__comment">
-                <form action="/item/comment">
-                    @csrf
-                    <button class="comment-button">💭</button>
-                    <div class="comment-count">{{ $comments_count }}</div>
-                </form>
+                <p class="comment-button">💭</p>
+                <div class="comment-count">{{ $comments_count }}</div>
             </div>
         </div>
 

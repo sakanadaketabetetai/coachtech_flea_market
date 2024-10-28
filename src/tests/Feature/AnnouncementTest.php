@@ -19,9 +19,9 @@ class AnnouncementTest extends TestCase
      * A basic feature test example.
      *
      * @test
-     * 
+     * @group announcement
      */
-    public function it_sends_annoucement_emails()
+    public function test_it_sends_annoucement_emails()
     {
         //モックの設定
         Mail::fake();

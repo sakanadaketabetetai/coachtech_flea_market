@@ -14,7 +14,9 @@
         <input type="hidden" name="id" value="{{ $profile->id }}">
         
         <div class="profile__image-section">
-            <div id="imagePreview" class="profile__image-preview"></div>
+            <div id="imagePreview" class="profile__image-preview">
+                <img src="{{ $user_image }}" alt="ユーザー画像">
+            </div>
             <div class="profile__image-upload">
                 <label for="image" class="profile__image-label">画像を選択する</label>
                 <input type="file" name="image" id="image" accept="image/*" onchange="handleFileChange()" class="profile__image-input">

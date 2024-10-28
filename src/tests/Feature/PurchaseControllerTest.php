@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Cache;
 class PurchaseControllerTest extends TestCase
 {
     use RefreshDatabase;
+
     /**
      * A basic feature test example.
      *
@@ -161,6 +162,7 @@ class PurchaseControllerTest extends TestCase
 
         Mail::to($user->email)->send(new PurchaseCompleteMail($order, $user, $test_item));
     }
+    
     public function setUp(): void
     {
         parent::setUp();

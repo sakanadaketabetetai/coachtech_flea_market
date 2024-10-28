@@ -19,7 +19,7 @@
     border-radius: 50%;
     margin-right: 20px;
 }
-
+ 
 .mypage__name h2 {
     font-size: 24px;
     font-weight: bold;
@@ -30,21 +30,22 @@
 }
 
 .mypage__edit-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+    color: #ff6f61;
+    padding: 10px 30px;
+    border: 1px solid #ff6f61;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s
 }
 
 .mypage__edit-button:hover {
-    background-color: #45a049;
+    background-color: #b2b3b7;
 }
 
 /* 出品商品、購入商品のボタン部分 */
 .mypage__actions {
     margin-bottom: 30px;
+    border-bottom: 1px solid #3d3d3d;
 }
 
 .mypage__action-buttons {
@@ -53,17 +54,32 @@
 }
 
 .mypage__button {
-    color: white;
+    color: #000;
+    background-color: #f8f9fa; 
     padding: 10px 20px;
     margin-right: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: transform 0.2s;
+    transition: background-color 0.3s;
+}
+.mypage__button-select {
+    color: red;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .mypage__button:hover {
+    background-color: #b2b3b7;
+}
+.mypage__button-select:hover {
     background-color: #b2b3b7;
 }
 

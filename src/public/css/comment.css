@@ -43,17 +43,28 @@
     margin-bottom: 30px;
 }
 
-.item-actions__favorite, .item-actions__comment {
+.item-actions__favorite {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.item-actions__comment {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.favorite-button, .comment-button {
+.favorite-button {
     font-size: 24px;
     border: none;
     background: none;
     cursor: pointer;
+}
+
+.comment-button {
+    font-size: 24px;
+    border: none;
+    background: none;
 }
 
 .favorite-count, .comment-count {

@@ -1,0 +1,56 @@
+.admin-comment {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.admin-comment__container {
+    margin-top: 20px;
+}
+
+.admin-comment__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.admin-comment__table th, .admin-comment__table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.admin-comment__table th {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+.admin-comment__table td {
+    background-color: #fff;
+}
+
+.admin-comment__table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+.admin-comment__form {
+    display: inline-block;
+}
+
+.admin-comment__form button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-comment__form button:hover {
+    background-color: #c82333;
+}
+
+.admin-comment__pagination {
+    text-align: center;
+    margin-top: 20px;
+}

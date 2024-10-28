@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin_layout.css') }}">
     <title>COACHTECH</title>
     @yield('css')
 </head>
@@ -44,17 +44,25 @@
             </div>
         </div>
     </header>
-    <main class="main-content">
-        <div>
-            <div>
-                <a href="/admin/user">ユーザー一覧</a>
+    <main>
+        <div class="admin-dashboard">
+            <!-- サイドメニュー -->
+            <nav class="admin-dashboard__sidebar">
+                <div class="admin-dashboard__menu-title">
+                    管理メニュー
+                </div>
+                <ul class="admin-dashboard__menu-list">
+                    <li class="admin-dashboard__menu-item">
+                        <a href="/admin/user" class="admin-dashboard__menu-link">ユーザー一覧</a>   
+                    </li>
+                    <li class="admin-dashboard__menu-item">
+                        <a href="/admin/comment" class="admin-dashboard__menu-link">コメント一覧</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="admin-dashboard__content">
+                @yield('content')
             </div>
-            <div>
-                <a href="/admin/comment">コメント一覧</a>
-            </div>
-        </div>
-        <div class="main-content__container">
-            @yield('content')
         </div>
     </main>
 </body>
