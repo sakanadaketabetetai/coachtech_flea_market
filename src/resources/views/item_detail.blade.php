@@ -27,7 +27,7 @@
                             <img src="/storage/images/無料で使えるスターアイコン.svg" class="item-detail__button-image"alt="お気に入りボタン">
                         </button>
                     @else
-                        <button type="submit" class="item-detail__favorite-button">
+                        <button type="submit" class="item-detail__favorite-button"> 
                             <img src="/storage/images/スターの枠アイコン.svg" class="item-detail__button-image"alt="お気に入りボタン">
                         </button>
                     @endif
@@ -39,7 +39,7 @@
                     @csrf
                     <input type="hidden" name="item_id" value="{{ $item->id }}">
                     <button class="item-detail__comment-button">
-                    <img src="/storage/images/ふきだしのアイコン.svg" class="item-detail__button-image"alt="お気に入りボタン">
+                        <img src="/storage/images/ふきだしのアイコン.svg" class="item-detail__button-image"alt="お気に入りボタン">
                     </button>
                     <div class="item-detail__comment-count">{{ $comments_count }}</div>
                 </form>

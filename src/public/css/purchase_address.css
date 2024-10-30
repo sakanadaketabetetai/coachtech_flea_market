@@ -5,12 +5,11 @@
     padding: 20px;
     background-color: #f7f7f7;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ヘッダー部分 */
 .purchase-address__header {
-    margin-bottom: 20px;
+    margin-bottom: 40px; 
 }
 
 .purchase-address__header h2 {
@@ -36,6 +35,7 @@
 .form-group {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 /* ラベル */
@@ -64,18 +64,20 @@
 /* 送信ボタン */
 .form-group--submit {
     text-align: center;
+    margin-top: 30px;
 }
 
 .submit-button {
-    background-color: #4CAF50;
+    background-color: #ff5f5f;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .submit-button:hover {
-    background-color: #45a049;
+    background-color: #a91609;
 }

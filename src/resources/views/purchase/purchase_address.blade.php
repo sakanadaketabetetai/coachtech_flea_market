@@ -29,7 +29,6 @@
                 <label for="building" class="form-label">建物名</label>
                 <input type="text" name="building" id="building" class="form-input">
             </div>
-
             <div class="form-group form-group--submit">
                 <button type="submit" class="submit-button">更新する</button>
             </div>

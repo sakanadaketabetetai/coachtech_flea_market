@@ -15,17 +15,25 @@
             <h3 class="item-details__name">{{ $item->item_name }}</h3>
             <h4 class="item-details__price">￥{{ $item->price }} 円</h4>
         </div>
-        <div class="item-actions">
+        <div class="item-actions"> 
             <div class="item-actions__favorite">
                 <form action="/item/favorite/update" method="post">
                     @csrf
                     <input type="hidden" name="item_id" value="{{ $item->id }}">
-                    <button class="favorite-button" type="submit">★</button>
+                    @if($item->isFavorite())
+                        <button type="submit" class="favorite-button">
+                            <img src="/storage/images/無料で使えるスターアイコン.svg" class="item-detail__button-image"alt="お気に入りボタン">
+                        </button>
+                    @else
+                        <button type="submit" class="favorite-button"> 
+                            <img src="/storage/images/スターの枠アイコン.svg" class="item-detail__button-image"alt="お気に入りボタン">
+                        </button>
+                    @endif
                     <div class="favorite-count">{{ $favorite_items_count }}</div>
                 </form>
             </div>
             <div class="item-actions__comment">
-                <p class="comment-button">💭</p>
+                <img src="/storage/images/ふきだしのアイコン.svg" class="item-detail__button-image"alt="お気に入りボタン">
                 <div class="comment-count">{{ $comments_count }}</div>
             </div>
         </div>

@@ -7,31 +7,35 @@
 @section('content')
 <div class="mypage">
     <div class="mypage__header">
-        <div class="mypage__image">
-            <img src="{{ $user_image }}" alt="ユーザー画像">
+        <div class="mypage__header-left">
+            <div class="mypage__image">
+                <img src="{{ $user_image }}" alt="ユーザー画像">
+            </div>
+            <div class="mypage__name">
+                <h2>{{ $user->name }}</h2>
+            </div>
         </div>
-        <div class="mypage__name">
-            <h2>{{ $user->name }}</h2>
+        <div class="mypage__header-right">
+            <div class="mypage__profile-edit">
+                <form action="/mypage/profile" method="post">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $user->id }}">
+                    <button class="mypage__edit-button">プロフィール編集</button>
+                </form>
+            </div>
+            <div class="mypage__profile-edit">
+                <form action="/mypage/sell" method="post">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $user->id }}">
+                    <button class="mypage__edit-button">販売実績及び販売状況</button>
+                </form>
+            </div>
+            @role('admin') 
+            <div class="mypage__profile-edit">
+                <a href="/admin" class="mypage__edit-button">管理画面</a> 
+            </div>
+            @endrole
         </div>
-        <div class="mypage__profile-edit">
-            <form action="/mypage/profile" method="post">
-                @csrf
-                <input type="hidden" name="id" value="{{ $user->id }}">
-                <button class="mypage__edit-button">プロフィール編集</button>
-            </form>
-        </div>
-        <div class="mypage__profile-edit">
-            <form action="/mypage/sell" method="post">
-                @csrf
-                <input type="hidden" name="id" value="{{ $user->id }}">
-                <button class="mypage__edit-button">販売実績及び販売状況</button>
-            </form>
-        </div>
-        @role('admin') 
-        <div>
-            <a href="/admin" class="mypage__edit-button">管理画面</a> 
-        </div>
-        @endrole
     </div>
     <div class="mypage__actions">
         <div class="mypage__action-buttons"> 

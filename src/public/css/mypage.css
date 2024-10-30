@@ -9,8 +9,21 @@
 /* ユーザー情報のヘッダー部分 */
 .mypage__header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.mypage__header-right{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.mypage__header-left{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mypage__image img {
@@ -26,8 +39,8 @@
 }
 
 .mypage__profile-edit {
-    margin-left: auto;
-}
+    align-items: center;
+} 
 
 .mypage__edit-button {
     color: #ff6f61;
@@ -35,6 +48,7 @@
     border: 1px solid #ff6f61;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
     transition: background-color 0.3s
 }
 

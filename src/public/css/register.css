@@ -5,7 +5,6 @@
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* タイトル部分 */
@@ -64,17 +63,19 @@
 }
 
 .register_button-submit {
-    background-color: #4CAF50;
+    width: 100%;
+    background-color: #ff5f5f;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .register_button-submit:hover {
-    background-color: #45a049;
+    background-color: #a91609;
 }
 
 /* リンク */
@@ -84,8 +85,9 @@
 }
 
 .register_link-text {
-    color: #4CAF50;
+    color: #007bff;
     text-decoration: none;
+    font-size: 14px;
 }
 
 .register_link-text:hover {
