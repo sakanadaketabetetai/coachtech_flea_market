@@ -17,23 +17,29 @@
                 <th>販売状況</th>
                 <th>購入者</th>
                 <th>支払い方法</th>
-                <th>支払い状況</th>
+                <th>支払い状況</th> 
                 <th>振込確認</th>
             </tr>
             @foreach ($items as $item)
             <tr>
                 <td>{{ $item->item_name }}</td>
                 <td>{{ $item->price }}</td>
-                <td>{{ $item->purchase_status }}</td>
+                <td>{{ $item->status }}</td>
                 <td>{{ $item->order_user}}</td>
                 <td>{{ $item->payment_method }}</td>
                 <td>{{ $item->order_status }}</td>
                 <td>
-                    <form action="" method="post">
+                    @if($item->status == "売約済")
+                        <p class="mypage-sell__payment">確認済</p>
+                    @else
+                    <form action="/mypage/sell/payment" method="post">
+                        @csrf
+                        <input type="hidden" name="item_id" value="{{ $item->id }}">
                         <div>
                             <button type="submit">振込を確認</button>
                         </div>
                     </form>
+                    @endif
                 </td>
             </tr>
             @endforeach

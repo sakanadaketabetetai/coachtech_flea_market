@@ -49,7 +49,7 @@
                     @else   
                         <button class="mypage__button" type="submit">出品した商品</button>    
                     @endif
-                </div>
+                </div> 
             </form>
             <form action="/mypage/purchase/items" method="get">
                 @csrf
@@ -67,14 +67,22 @@
     </div>
     <div class="mypage__items">
         @foreach($items as $item)
-        <div class="mypage__item">
+        <div>
             <form action="/item/{{ $item->id }}" method="get">
                 @csrf
-                <div>
-                    <button class="mypage__item-button">
-                        <img src="{{ $item->item_image }}" alt="商品画像">
-                    </button>
-                </div>
+                <button class="mypage__item-button">
+                    <div class="item-card__image">
+                        <img src="{{ $item->item_image }}" alt="商品画像" class="item-card__image-img">
+                        <div class="item-list__priceContainer">
+                            <span class="item-list__price">￥{{ $item->price }}</span>
+                        </div>
+                        @if ($item->status == "売約済")
+                        <div class="item-list__">
+                            <span class="item-list__soldout">Sold Out</span>
+                        </div>
+                        @endif
+                    </div>
+                </button>
             </form>
         </div>
         @endforeach

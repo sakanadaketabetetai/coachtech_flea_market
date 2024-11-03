@@ -11,8 +11,8 @@
     </div>
     <div class="item-detail__info">
         <div class="item-detail__header">
-            <h2 class="item-detail__name">商品名</h2> 
-            <h3 class="item-detail__brand">{{ $item->item_name }}</h3>
+            <h2 class="item-detail__name">{{ $item->item_name }}</h2> 
+            <h3 class="item-detail__brand">ﾌﾞﾗﾝﾄﾞ名</h3>
         </div>
         <div class="item-detail__price">
             <h3>￥{{ $item->price }} 円</h3>
@@ -48,8 +48,12 @@
         <div class="item-detail__purchase">
             <form action="/purchase/{{ $item->id }}" method="get">
                 @csrf
-                <button class="item-detail__purchase-button">購入する</button>
-            </form>
+                @if($item->status == "売約済")
+                    <p class="item-detail__purchase-button-soldout">Sold Out</p>
+                @else
+                    <button class="item-detail__purchase-button">購入する</button>
+                @endif
+            </form> 
         </div>
         <div class="item-detail__description">
             <h2>商品説明</h2>

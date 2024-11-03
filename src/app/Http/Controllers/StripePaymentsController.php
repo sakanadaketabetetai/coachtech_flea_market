@@ -56,6 +56,10 @@ class StripePaymentsController extends Controller
                 'user_id' => $user_id,
             ]);
 
+            //Itemテーブルの販売状況を保存
+            $item->status = '売約済';
+            $item->save();
+
             return view('stripe.stripe_complete');
         } catch (\Exception $e){
             return back()->withErrors(['message' => '支払いに失敗しました: ']);

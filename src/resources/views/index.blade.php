@@ -39,6 +39,14 @@
         <a href="/item/{{ $item->id }}">         
             <div class="item-card__image">
                 <img src="{{ $item->item_image }}" alt="item image" class="item-card__image-img">
+                <div class="item-list__priceContainer">
+                    <span class="item-list__price">￥{{ $item->price }}</span>
+                </div>
+                @if ($item->status == "売約済")
+                <div class="item-list__">
+                    <span class="item-list__soldout">Sold Out</span>
+                </div>
+                @endif
             </div>
         </a>        
         @endforeach

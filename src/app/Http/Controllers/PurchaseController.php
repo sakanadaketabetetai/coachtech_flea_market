@@ -44,7 +44,6 @@ class PurchaseController extends Controller
             $profile->building = $request->building;
             $profile->save();
         }
-
         return view('purchase.purchase_index', compact(['user', 'profile','item', 'purchase_method']));
     }
 
@@ -78,6 +77,10 @@ class PurchaseController extends Controller
             'order_status' => 'pending',
             'amount' => $request->amount,
         ]);
+        
+        //Itemの販売状況を保存
+        $item->status = '注文中';
+        $item->save();
 
         $order = Order::where('user_id', $user_id)
                         ->where('item_id', $item->id)

@@ -24,21 +24,26 @@
         </div> 
 
         <div class="profile__details">
+            @error('name')
+            <div class="profile_error">
+                {{ $message }} 
+            </div>
+            @enderror
             <div class="profile__field">
                 <label class="profile__label">ユーザー名</label>
-                <input type="text" name="name" placeholder="{{ $user->name }}" class="profile__input">
+                <input type="text" name="name" class="profile__input" value="{{ $user->name }}" >
             </div>
             <div class="profile__field">
                 <label class="profile__label">郵便番号</label>
-                <input type="text" name="post_code" class="profile__input">
+                <input type="text" name="post_code" class="profile__input" value="{{ $profile->post_code }}">
             </div>
             <div class="profile__field">
                 <label class="profile__label">住所</label>
-                <input type="text" name="address" class="profile__input">
+                <input type="text" name="address" class="profile__input" value="{{ $profile->address }}">
             </div>
             <div class="profile__field">
                 <label class="profile__label">建物名</label>
-                <input type="text" name="building" class="profile__input">
+                <input type="text" name="building" class="profile__input" value="{{ $profile->building }}">
             </div>
         </div>
 

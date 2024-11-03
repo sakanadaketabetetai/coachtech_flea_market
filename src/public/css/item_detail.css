@@ -102,6 +102,19 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.item-detail__purchase-button-soldout {
+    width:100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+
+}
 
 .item-detail__purchase-button:hover {
     background-color: #a91609;
