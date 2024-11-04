@@ -22,7 +22,7 @@
                 <p style="margin: 0; font-size: 16px;">振込先は下記の通りとなりますので、1週間以内に振り込みをお願いします。</p>
             </div>
             <div class="email-action" style="margin-bottom: 20px;">
-                <p style="margin: 0; font-size: 16px;">ご注文内容の確認につきましては、「coachtech_flea mypage」より、対象のご予約のご確認をお願いいたします。</p>
+                <p style="margin: 0; font-size: 16px;">ご注文内容の確認につきましては、「coachtechフリマ」より、対象のご予約のご確認をお願いいたします。</p>
                 <a href="http://localhost" target="_blank" style="color: #3498db; text-decoration: none; font-size: 16px;">http://localhost</a>
                 <p style="margin: 0; font-size: 14px; color: #888;">※ログインが必要です。</p>
             </div>

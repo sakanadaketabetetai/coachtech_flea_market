@@ -49,7 +49,7 @@ body {
 
 .item-detail__price {
     font-size: 22px;
-    color: #ff6f61;
+    color: #333;
     margin-bottom: 20px;
 }
 
@@ -151,7 +151,19 @@ body {
     color: #333;
 }
 
-.item-detail__category {
+/* .item-detail__category {
     font-size: 16px;
-    color: #555;
+    color: #333;
+    background-color: #777;
+    padding: 10px;
+    border-radius: 3px;
+} */
+.item-detail__category-text {
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    background-color: #777;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
 }

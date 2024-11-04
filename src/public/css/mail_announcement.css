@@ -1,0 +1,53 @@
+        /* リセット */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 全体のスタイル */
+        body.announcement-email {
+            background-color: #f4f4f4;
+            padding: 20px;
+            font-size: 16px;
+            color: #333333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        .announcement-email__container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .announcement-email__header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .announcement-email__content {
+            padding: 30px 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555555;
+        }
+
+        .announcement-email__content p {
+            margin-bottom: 15px;
+        }
+
+        .announcement-email__footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #888888;
+        }

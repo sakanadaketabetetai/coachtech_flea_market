@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-
+ 
         <div class="purchase-index__payment-delivery">
             <div class="purchase-index__payment">
                 <h3 class="purchase-index__section-title">支払い方法</h3>

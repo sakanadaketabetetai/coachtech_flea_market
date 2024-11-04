@@ -56,7 +56,7 @@
             <div class="item-info-grid">
                 <div class="item-info-grid__item">
                     <div class="sell-form__label">
-                        <h4>カテゴリー</h4>
+                        <h4>商品名</h4>
                     </div>
                     <input type="text" name="item_name" class="form-input" required>
                 </div>

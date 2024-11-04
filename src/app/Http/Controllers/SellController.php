@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Storage;
 
 class SellController extends Controller
 {
-    public function sell_index(){
+    public function sell_index(){ 
         $conditions = Condition::all();
         $categories = Category::all();
         return view('sell', compact(['conditions', 'categories']));

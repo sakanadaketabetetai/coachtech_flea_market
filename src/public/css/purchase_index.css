@@ -96,7 +96,7 @@
 }
 
 .purchase-index__item-price {
-    color: #e74c3c;
+    color: #333;
     font-size: 1.2em;
 }
 
@@ -120,17 +120,19 @@
 }
 
 .purchase-index__change-button {
-    background-color: #3498db;
-    color: white;
+    color: #3498db;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 .purchase-index__change-button:hover {
     background-color: #2980b9;
+    color: white;
 }
 
 .purchase-index__section-title {

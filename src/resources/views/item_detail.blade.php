@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="item-detail">
+<div class="item-detail"> 
     <div class="item-detail__image-container">
         <img src="{{ $item->item_image }}" alt="商品画像" class="item-detail__image">
     </div>
@@ -68,7 +68,7 @@
                     <th>カテゴリー</th>
                     <td>
                         <div class="item-detail__category">
-                            {{ $category->name }}
+                            <p class="item-detail__category-text">{{ $category->name }}</p>
                         </div>
                     </td>
                 </tr>

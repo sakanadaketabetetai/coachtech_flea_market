@@ -67,6 +67,7 @@ class SellControllerTest extends TestCase
             ['condition' => '傷や汚れあり'],
             ['condition' => 'ジャンク品'],
         ]);
+
         $categories = Category::insert([
             ['name' => 'レディース'],
             ['name' => 'メンズ'],

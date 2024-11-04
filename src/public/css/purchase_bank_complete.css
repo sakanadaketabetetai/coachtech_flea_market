@@ -1,0 +1,63 @@
+/* 基本リセット */
+body, h2, p, form, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* コンテナ全体 */
+.purchase-bank-complete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.purchase-bank-complete__inner {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* タイトル */
+.purchase-bank-complete__text {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* メッセージ */
+.purchase-bank-complete__message {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ボタン */
+.purchase-bank-complete__button-submit {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+}
+
+.purchase-bank-complete__button-submit:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+}

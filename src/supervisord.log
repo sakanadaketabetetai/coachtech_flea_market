@@ -705,3 +705,31 @@
 2024-11-03 10:19:31,030 INFO spawned: 'npm' with pid 357
 2024-11-03 10:19:31,986 INFO exited: npm (exit status 1; not expected)
 2024-11-03 10:19:32,987 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-03 19:46:53,923 INFO reaped unknown pid 4800
+2024-11-03 20:31:58,910 INFO reaped unknown pid 5226
+2024-11-03 20:32:57,824 INFO reaped unknown pid 5244
+2024-11-03 20:36:43,419 INFO reaped unknown pid 5289
+2024-11-03 20:37:32,441 INFO reaped unknown pid 5307
+2024-11-03 20:38:56,347 INFO reaped unknown pid 5325
+2024-11-04 12:46:42,169 WARN received SIGQUIT indicating exit request
+2024-11-04 12:46:42,176 INFO waiting for cron, php-fpm to die
+2024-11-04 12:46:42,216 INFO stopped: php-fpm (exit status 0)
+2024-11-04 12:46:43,221 INFO stopped: cron (terminated by SIGTERM)
+2024-11-04 15:22:04,088 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-04 15:22:04,091 INFO supervisord started with pid 1
+2024-11-04 15:22:05,094 INFO spawned: 'cron' with pid 10
+2024-11-04 15:22:05,098 INFO spawned: 'npm' with pid 11
+2024-11-04 15:22:05,100 INFO spawned: 'php-fpm' with pid 12
+2024-11-04 15:22:06,158 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-04 15:22:06,158 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-04 15:22:06,158 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-04 15:22:06,223 INFO exited: npm (exit status 1; not expected)
+2024-11-04 15:22:07,225 INFO spawned: 'npm' with pid 38
+2024-11-04 15:22:08,156 INFO exited: npm (exit status 1; not expected)
+2024-11-04 15:22:09,159 INFO spawned: 'npm' with pid 62
+2024-11-04 15:22:10,087 INFO exited: npm (exit status 1; not expected)
+2024-11-04 15:22:12,091 INFO spawned: 'npm' with pid 86
+2024-11-04 15:22:13,056 INFO exited: npm (exit status 1; not expected)
+2024-11-04 15:22:16,061 INFO spawned: 'npm' with pid 110
+2024-11-04 15:22:17,011 INFO exited: npm (exit status 1; not expected)
+2024-11-04 15:22:18,012 INFO gave up: npm entered FATAL state, too many start retries too quickly

@@ -31,7 +31,7 @@
                 <td>
                     @if($item->status == "売約済")
                         <p class="mypage-sell__payment">確認済</p>
-                    @else
+                    @elseif($item->status == "注文中")
                     <form action="/mypage/sell/payment" method="post">
                         @csrf
                         <input type="hidden" name="item_id" value="{{ $item->id }}">
