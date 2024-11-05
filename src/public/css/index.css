@@ -2,7 +2,6 @@
 .item-list {
     max-width: 1230px;
     padding: 20px;
-    background-color: #f5f5f5;
 }
 
 .item-list__filters {
@@ -18,29 +17,32 @@
 }
 
 /* ボタンスタイル */
-.item-list__button {
+.item-list__button-submit {
     padding: 10px 20px;
     font-size: 16px;
     color: #3d3d3d;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #f5f5f5;
+    background-color: white;
     transition: background-color 0.3s;
 }
 
-.item-list__button-select {
+.item-list__button-submit-select {
     padding: 10px 20px;
     font-size: 16px;
     color: red;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #f5f5f5;
+    background-color: white;
     transition: background-color 0.3s;
 }
 
-.item-list__button:hover {
+.item-list__button-submit:hover {
+    background-color: #b2b3b7;
+}
+.item-list__button-submit-select:hover {
     background-color: #b2b3b7;
 }
 

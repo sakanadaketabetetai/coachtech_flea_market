@@ -18,7 +18,7 @@
             <div class="header__search">
                 <form action="/search" method="get" id="searchForm">
                     @csrf
-                    <input type="text" class="header__search-input" name="keyword" placeholder="商品を検索" oninput="document.getElementById('searchForm').submit();">
+                    <input type="text" class="header__search-input" name="keyword" placeholder="なにをお探しですか？" oninput="document.getElementById('searchForm').submit();">
                 </form>
             </div>
             <div class="header__nav">

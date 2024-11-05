@@ -10,25 +10,25 @@
         <div class="item-list__filters-buttons"> 
             <form action="/item/favorite/search/mylist" method="get">
                 @csrf
-                <div>
+                <div class="item-list__button">
                     <input type="hidden" name="user_id" value="">
                     <input type="hidden" name="search" value="all_items">
                     @if($search == "all_items")
-                        <button class="item-list__button-select" type="submit" >おすすめ</button>
+                        <button class="item-list__button-submit-select" type="submit" >おすすめ</button>
                     @else
-                        <button class="item-list__button" type="submit" >おすすめ</button>
+                        <button class="item-list__button-submit" type="submit" >おすすめ</button>
                     @endif
                 </div>
             </form>
             <form action="/item/favorite/search/mylist" method="get">
                 @csrf
-                <div>
+                <div class="item-list__button">
                     <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                     <input type="hidden" name="search" value="my_favorite">
                     @if($search == "my_favorite")
-                        <button class="item-list__button-select" type="submit" >マイリスト</button>
+                        <button class="item-list__button-submit-select" type="submit" >マイリスト</button>
                     @else
-                        <button class="item-list__button" type="submit" >マイリスト</button>
+                        <button class="item-list__button-submit" type="submit" >マイリスト</button>
                     @endif
                 </div>
             </form>

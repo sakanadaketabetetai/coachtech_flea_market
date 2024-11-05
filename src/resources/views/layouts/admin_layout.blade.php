@@ -16,7 +16,7 @@
                 </a>
             </div>
             <div class="header__search">
-                <input type="text" class="header__search-input" placeholder="商品を検索">
+                <input type="text" class="header__search-input" placeholder="なにをお探しですか？">
             </div>
             <div class="header__nav">
                 @if( Auth::check() )

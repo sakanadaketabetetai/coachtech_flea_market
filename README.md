@@ -15,8 +15,7 @@ COACHTECHブランドのアイテムを出品したいため、独自のフリ�
 ### 参考URL(awsにデプロイ)
 
 ## GitHubのリポジトリ
-- https://github.com/sakanadaketabetetai/rese.git
-　
+- https://github.com/sakanadaketabetetai/coachtech_flea_market.git
 
 ## 機能一覧
 ### 全権限に共通する機能
@@ -47,7 +46,7 @@ COACHTECHブランドのアイテムを出品したいため、独自のフリ�
 
 ## テーブル設計
 ### coachtech_flea_market table図
-![coachtech_flea_market](https://github.com/user-attachments/assets/92adad85-1d8a-4ef3-a18f-be12af0c8c5f)
+![coachtech_flea_market_table](https://github.com/user-attachments/assets/5642d1d8-0df8-4caf-8016-7a5ef1824fd5)
 ### laravel_permission table図
 ![laravel_permission](https://github.com/user-attachments/assets/be7b1173-d530-42dd-8dbc-31440965ced2)
 
@@ -55,14 +54,14 @@ COACHTECHブランドのアイテムを出品したいため、独自のフリ�
 ### coachtech_flea_market er図
 ![coachtech_flea_market](https://github.com/user-attachments/assets/92adad85-1d8a-4ef3-a18f-be12af0c8c5f)
 ### laravel_permission er図 (laravel Permissionパッケージ)
-![laravel_permission](https://github.com/user-attachments/assets/be7b1173-d530-42dd-8dbc-31440965ced2)
+![coachtech_flea_market_table_laravelpermission](https://github.com/user-attachments/assets/b1ebbbe2-112a-46f5-be80-05e57ee81fd1)
 
 ## 環境構築
 
 ### Dockerビルド
 
 1. ```bash 
-   git clone git@github.com:sakanadaketabetetai/rese.git
+   git clone @gitgithub.com:sakanadaketabetetai/coachtech_flea_market.git
    ```
 2. DockerDesktopアプリを立ち上げる
 3. docker-compose up -d --build
@@ -165,6 +164,23 @@ COACHTECHブランドのアイテムを出品したいため、独自のフリ�
 　 ユーザー情報やコメント一覧の確認ができます。アナウンスメール送信やコメントの
    削除が可能です。
 
+
+### PHPUnit 単体テスト
+
+#### PHPUnitについては3つのコントローラーのデータ通信を確認する機能を作成
+
+1. AnnouncementController用テスト
+    ```bash
+    php artisan test --group=annoucement
+    ```
+2. PurchaseController用テスト
+    ```bash
+    php artisan test --group=purchase
+    ```
+3. SellController用テスト
+    ```bash
+    php artisan test --group=sell
+    ```
 
 
 

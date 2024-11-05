@@ -3,7 +3,6 @@
     max-width: 1230px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f9fa;
 }
 
 /* ユーザー情報のヘッダー部分 */
@@ -46,6 +45,7 @@
 .mypage__edit-button {
     color: #ff6f61;
     padding: 10px 30px;
+    background-color: white;
     border: 1px solid #ff6f61;
     border-radius: 5px;
     cursor: pointer;
@@ -70,8 +70,8 @@
 
 .mypage__button {
     color: #000;
-    background-color: #f8f9fa; 
     padding: 10px 20px;
+    background-color: white;
     margin-right: 15px;
     border: none;
     border-radius: 5px;
@@ -81,7 +81,7 @@
 }
 .mypage__button-select {
     color: red;
-    background-color: #f8f9fa;
+    background-color: white;
     padding: 10px 20px;
     margin-right: 15px;
     border: none;
@@ -94,6 +94,7 @@
 .mypage__button:hover {
     background-color: #b2b3b7;
 }
+
 .mypage__button-select:hover {
     background-color: #b2b3b7;
 }
